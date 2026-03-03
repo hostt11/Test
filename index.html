@@ -1,42 +1,23 @@
-<!-- public/index.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <meta name="theme-color" content="#7C3AED">
-    <meta name="description" content="FLYHOST - Hébergement de serveurs Node.js haute performance. Créez votre serveur en 1 minute, gérez-le depuis votre mobile.">
-    <meta name="keywords" content="hébergement, serveur, nodejs, pterodactyl, hosting, flyhost">
-    <meta name="author" content="FLYHOST">
+    <meta name="description" content="KermHosting - Hébergement de serveurs Node.js haute performance">
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://flyhost.store/">
-    <meta property="og:title" content="FLYHOST - Hébergement Node.js">
-    <meta property="og:description" content="Créez votre serveur Node.js en 1 minute. Interface mobile intuitive, prix abordables.">
-    <meta property="og:image" content="https://flyhost.store/icons/og-image.jpg">
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%237C3AED'/><text x='50' y='70' font-size='50' text-anchor='middle' fill='white' font-family='Arial'>K</text></svg>">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://flyhost.store/">
-    <meta property="twitter:title" content="FLYHOST - Hébergement Node.js">
-    <meta property="twitter:description" content="Créez votre serveur Node.js en 1 minute. Interface mobile intuitive.">
-    <meta property="twitter:image" content="https://flyhost.store/icons/twitter-image.jpg">
-    
-    <!-- Apple Touch Icon & Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%237C3AED'/><text x='50' y='70' font-size='50' text-anchor='middle' fill='white' font-family='Arial'>F</text></svg>">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%237C3AED'/><text x='50' y='70' font-size='50' text-anchor='middle' fill='white' font-family='Arial'>F</text></svg>">
-    
-    <!-- Fonts & Icons -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <title>FLYHOST - Hébergement Node.js nouvelle génération</title>
+    <title>KermHosting - Hébergement Node.js</title>
     
     <style>
-        /* ===== VARIABLES ===== */
         :root {
             --primary: #7C3AED;
             --primary-light: #9D6CFF;
@@ -72,32 +53,20 @@
             --radius-lg: 16px;
             --radius-xl: 24px;
             --radius-full: 9999px;
-            
-            --safe-area-inset-top: env(safe-area-inset-top, 0px);
-            --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
         }
 
-        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        html {
-            font-size: 16px;
-            -webkit-text-size-adjust: 100%;
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', sans-serif;
             background: var(--bg-dark);
             color: var(--text-primary);
             line-height: 1.5;
-            overflow-x: hidden;
             min-height: 100vh;
-            position: relative;
         }
 
         body::before {
@@ -109,37 +78,17 @@
             bottom: 0;
             background: 
                 radial-gradient(circle at 20% 30%, rgba(124, 58, 237, 0.1) 0%, transparent 30%),
-                radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.1) 0%, transparent 30%),
-                radial-gradient(circle at 40% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 30%);
+                radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.1) 0%, transparent 30%);
             pointer-events: none;
             z-index: -1;
         }
 
-        /* ===== TYPOGRAPHY ===== */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            display: inline-block;
-        }
-
-        /* ===== LAYOUT ===== */
         .app-container {
             display: flex;
             min-height: 100vh;
-            position: relative;
-            padding-top: var(--safe-area-inset-top);
-            padding-bottom: var(--safe-area-inset-bottom);
         }
 
-        /* ===== SIDEBAR ===== */
+        /* Sidebar */
         .sidebar {
             position: fixed;
             top: 0;
@@ -149,12 +98,10 @@
             background: var(--bg-sidebar);
             border-right: 1px solid var(--border-color);
             transform: translateX(-100%);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.3s;
             z-index: 1000;
             display: flex;
             flex-direction: column;
-            backdrop-filter: blur(10px);
-            box-shadow: var(--shadow-lg);
         }
 
         .sidebar.active {
@@ -167,17 +114,13 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(4px);
+            background: rgba(0,0,0,0.5);
             z-index: 999;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
+            display: none;
         }
 
         .sidebar-overlay.active {
-            opacity: 1;
-            visibility: visible;
+            display: block;
         }
 
         .sidebar-header {
@@ -210,16 +153,7 @@
             cursor: pointer;
             width: 32px;
             height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             border-radius: var(--radius-full);
-            transition: all 0.2s;
-        }
-
-        .close-sidebar:hover {
-            background: var(--bg-hover);
-            color: var(--text-primary);
         }
 
         .sidebar-user {
@@ -244,38 +178,27 @@
 
         .user-info {
             flex: 1;
-            min-width: 0;
         }
 
         .user-name {
             font-weight: 600;
-            font-size: 1rem;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         .user-email {
             font-size: 0.75rem;
             color: var(--text-secondary);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         .user-badge {
             background: var(--primary);
             color: white;
             font-size: 0.625rem;
-            font-weight: 600;
             padding: 2px 8px;
             border-radius: var(--radius-full);
-            white-space: nowrap;
         }
 
         .sidebar-nav {
             flex: 1;
-            overflow-y: auto;
             padding: 20px 0;
         }
 
@@ -303,9 +226,7 @@
             padding: 12px 16px;
             color: var(--text-secondary);
             text-decoration: none;
-            font-weight: 500;
             border-radius: var(--radius-md);
-            transition: all 0.2s;
         }
 
         .sidebar-nav a:hover {
@@ -315,7 +236,6 @@
 
         .sidebar-nav i {
             width: 20px;
-            font-size: 1.1rem;
         }
 
         .sidebar-nav .divider {
@@ -342,14 +262,12 @@
         .stat-value {
             display: block;
             font-weight: 700;
-            font-size: 1rem;
             color: var(--primary);
         }
 
         .stat-label {
             font-size: 0.625rem;
             color: var(--text-secondary);
-            text-transform: uppercase;
         }
 
         .sidebar-social {
@@ -361,33 +279,25 @@
         .sidebar-social a {
             color: var(--text-secondary);
             font-size: 1.25rem;
-            transition: all 0.2s;
         }
 
-        .sidebar-social a:hover {
-            color: var(--primary);
-            transform: translateY(-2px);
-        }
-
-        /* ===== MAIN CONTENT ===== */
+        /* Main Content */
         .main-content {
             flex: 1;
             width: 100%;
-            min-width: 0;
         }
 
-        /* ===== TOP BAR ===== */
+        /* Top Bar */
         .top-bar {
             position: sticky;
             top: 0;
-            z-index: 100;
             background: var(--bg-sidebar);
-            backdrop-filter: blur(10px);
             padding: 12px 16px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             border-bottom: 1px solid var(--border-color);
+            z-index: 100;
         }
 
         .menu-toggle {
@@ -398,14 +308,7 @@
             cursor: pointer;
             width: 40px;
             height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             border-radius: var(--radius-full);
-        }
-
-        .menu-toggle:hover {
-            background: var(--bg-hover);
         }
 
         .top-bar-logo {
@@ -418,7 +321,6 @@
 
         .top-bar-logo i {
             color: var(--primary);
-            font-size: 1.25rem;
         }
 
         .top-bar-actions {
@@ -435,15 +337,8 @@
             cursor: pointer;
             width: 40px;
             height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             border-radius: var(--radius-full);
             position: relative;
-        }
-
-        .notification-btn:hover {
-            background: var(--bg-hover);
         }
 
         .notification-badge {
@@ -453,7 +348,6 @@
             background: var(--danger);
             color: white;
             font-size: 0.625rem;
-            font-weight: 600;
             min-width: 18px;
             height: 18px;
             border-radius: var(--radius-full);
@@ -472,11 +366,10 @@
             width: 32px;
             height: 32px;
             border-radius: var(--radius-full);
-            object-fit: cover;
             border: 2px solid var(--primary);
         }
 
-        /* ===== NOTIFICATIONS PANEL ===== */
+        /* Notifications Panel */
         .notifications-panel {
             position: fixed;
             top: 0;
@@ -486,7 +379,7 @@
             background: var(--bg-sidebar);
             border-left: 1px solid var(--border-color);
             transform: translateX(100%);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.3s;
             z-index: 1001;
             display: flex;
             flex-direction: column;
@@ -504,18 +397,6 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-        .notifications-header h3 {
-            font-size: 1.1rem;
-        }
-
-        .notifications-header button {
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            font-size: 1.25rem;
-            cursor: pointer;
-        }
-
         .notifications-list {
             flex: 1;
             overflow-y: auto;
@@ -529,7 +410,6 @@
             border-radius: var(--radius-md);
             background: var(--bg-card);
             margin-bottom: 8px;
-            transition: all 0.2s;
             border-left: 3px solid transparent;
         }
 
@@ -556,13 +436,11 @@
         .notification-title {
             font-weight: 600;
             font-size: 0.9rem;
-            margin-bottom: 4px;
         }
 
         .notification-message {
             font-size: 0.8rem;
             color: var(--text-secondary);
-            margin-bottom: 4px;
         }
 
         .notification-time {
@@ -570,14 +448,14 @@
             color: var(--text-muted);
         }
 
-        /* ===== PAGE CONTENT ===== */
+        /* Page Content */
         .page-content {
             padding: 20px 16px;
             max-width: 600px;
             margin: 0 auto;
         }
 
-        /* ===== HERO SECTION ===== */
+        /* Hero Section */
         .hero-section {
             text-align: center;
             margin-bottom: 40px;
@@ -627,6 +505,14 @@
             font-size: 2rem;
             line-height: 1.2;
             margin-bottom: 16px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
         .hero-subtitle {
@@ -646,14 +532,13 @@
             padding: 12px 24px;
             border-radius: var(--radius-full);
             font-weight: 600;
-            font-size: 0.9rem;
             border: none;
             cursor: pointer;
-            transition: all 0.2s;
             display: inline-flex;
             align-items: center;
             gap: 8px;
             text-decoration: none;
+            font-size: 0.9rem;
         }
 
         .btn-primary {
@@ -676,21 +561,6 @@
         .btn-outline:hover {
             border-color: var(--primary);
             background: var(--bg-hover);
-        }
-
-        .btn-link {
-            background: none;
-            color: var(--primary);
-            padding: 8px 16px;
-        }
-
-        .btn-link:hover {
-            text-decoration: underline;
-        }
-
-        .btn-large {
-            padding: 16px 32px;
-            font-size: 1rem;
         }
 
         .hero-stats {
@@ -717,7 +587,7 @@
             text-transform: uppercase;
         }
 
-        /* ===== SECTIONS ===== */
+        /* Sections */
         section {
             margin-bottom: 60px;
         }
@@ -726,6 +596,7 @@
             font-size: 1.75rem;
             text-align: center;
             margin-bottom: 12px;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         .section-subtitle {
@@ -734,10 +605,9 @@
             margin-bottom: 32px;
         }
 
-        /* ===== FEATURES ===== */
+        /* Features */
         .features-grid {
             display: grid;
-            grid-template-columns: 1fr;
             gap: 16px;
         }
 
@@ -746,23 +616,18 @@
             border-radius: var(--radius-lg);
             padding: 24px;
             border: 1px solid var(--border-color);
-            transition: all 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--primary);
-            box-shadow: var(--shadow-glow);
         }
 
         .feature-icon {
             width: 56px;
             height: 56px;
             border-radius: var(--radius-md);
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(16, 185, 129, 0.1));
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
+            color: var(--primary);
             margin-bottom: 16px;
         }
 
@@ -774,10 +639,9 @@
         .feature-description {
             color: var(--text-secondary);
             font-size: 0.9rem;
-            line-height: 1.6;
         }
 
-        /* ===== PRICING ===== */
+        /* Pricing */
         .pricing-cards {
             display: flex;
             flex-direction: column;
@@ -843,20 +707,12 @@
             font-size: 0.9rem;
         }
 
-        .pricing-features li i {
-            width: 20px;
-        }
-
-        .pricing-features li i.fa-check {
+        .pricing-features i.fa-check {
             color: var(--success);
         }
 
-        .pricing-features li i.fa-times {
+        .pricing-features i.fa-times {
             color: var(--danger);
-        }
-
-        .pricing-features li.disabled {
-            opacity: 0.5;
         }
 
         .pricing-btn {
@@ -872,20 +728,14 @@
             align-items: center;
             gap: 12px;
             border: 1px solid var(--border-color);
-            font-size: 0.9rem;
             color: var(--text-secondary);
         }
 
         .pricing-note i {
             color: var(--primary);
-            font-size: 1.25rem;
         }
 
-        .pricing-cta {
-            text-align: center;
-        }
-
-        /* ===== HOW IT WORKS ===== */
+        /* How It Works */
         .steps {
             display: flex;
             flex-direction: column;
@@ -913,7 +763,6 @@
 
         .step-content h3 {
             margin-bottom: 4px;
-            font-size: 1.1rem;
         }
 
         .step-content p {
@@ -921,14 +770,13 @@
             font-size: 0.9rem;
         }
 
-        /* ===== TESTIMONIALS ===== */
+        /* Testimonials */
         .testimonials-slider {
             display: flex;
             overflow-x: auto;
             gap: 16px;
             padding: 4px 0 16px;
             scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
         }
 
         .testimonials-slider::-webkit-scrollbar {
@@ -953,7 +801,6 @@
             color: var(--text-secondary);
             font-size: 0.9rem;
             margin-bottom: 16px;
-            line-height: 1.6;
         }
 
         .testimonial-author {
@@ -966,11 +813,6 @@
             width: 40px;
             height: 40px;
             border-radius: var(--radius-full);
-            object-fit: cover;
-        }
-
-        .testimonial-author div {
-            flex: 1;
         }
 
         .testimonial-author strong {
@@ -983,7 +825,7 @@
             color: var(--text-secondary);
         }
 
-        /* ===== FAQ ===== */
+        /* FAQ */
         .faq-list {
             display: flex;
             flex-direction: column;
@@ -1023,7 +865,6 @@
             padding: 0 16px 16px;
             color: var(--text-secondary);
             font-size: 0.9rem;
-            line-height: 1.6;
             display: none;
         }
 
@@ -1031,12 +872,7 @@
             display: block;
         }
 
-        .faq-cta {
-            text-align: center;
-            margin-top: 24px;
-        }
-
-        /* ===== CTA SECTION ===== */
+        /* CTA Section */
         .cta-section {
             background: linear-gradient(135deg, var(--primary-dark), var(--secondary));
             border-radius: var(--radius-xl);
@@ -1055,18 +891,7 @@
             opacity: 0.9;
         }
 
-        .cta-actions .btn-primary {
-            background: white;
-            color: var(--primary);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .cta-actions .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        /* ===== FOOTER ===== */
+        /* Footer */
         .footer {
             margin-top: 60px;
             border-top: 1px solid var(--border-color);
@@ -1121,11 +946,6 @@
             color: var(--text-secondary);
             text-decoration: none;
             font-size: 0.8rem;
-            transition: color 0.2s;
-        }
-
-        .footer-column a:hover {
-            color: var(--primary);
         }
 
         .footer-bottom {
@@ -1147,40 +967,19 @@
         .footer-social a {
             color: var(--text-secondary);
             font-size: 1.25rem;
-            transition: all 0.2s;
         }
 
-        .footer-social a:hover {
-            color: var(--primary);
-            transform: translateY(-2px);
-        }
-
-        /* ===== RESPONSIVE ADJUSTMENTS ===== */
         @media (min-width: 768px) {
-            .page-content {
-                max-width: 800px;
-            }
-            
             .features-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
             .pricing-cards {
                 flex-direction: row;
-                gap: 20px;
             }
             
             .pricing-card {
                 flex: 1;
-            }
-            
-            .footer-content {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            
-            .footer-links {
-                gap: 48px;
             }
         }
 
@@ -1202,17 +1001,6 @@
                 display: none;
             }
         }
-
-        /* ===== ANIMATIONS ===== */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .hero-section, .features-section, .pricing-preview, 
-        .how-it-works, .testimonials, .faq-preview, .cta-section {
-            animation: fadeIn 0.8s ease-out forwards;
-        }
     </style>
 </head>
 <body>
@@ -1225,7 +1013,7 @@
             <div class="sidebar-header">
                 <div class="logo">
                     <i class="fas fa-cloud-upload-alt"></i>
-                    <span>FLYHOST</span>
+                    <span>KermHosting</span>
                 </div>
                 <button class="close-sidebar" id="closeSidebar">
                     <i class="fas fa-times"></i>
@@ -1324,7 +1112,7 @@
                 </button>
                 <div class="top-bar-logo">
                     <i class="fas fa-cloud-upload-alt"></i>
-                    <span>FLYHOST</span>
+                    <span>KermHosting</span>
                 </div>
                 <div class="top-bar-actions">
                     <button class="notification-btn" id="notificationBtn">
@@ -1347,7 +1135,7 @@
                     <div class="notification-item unread">
                         <i class="fas fa-gift notification-icon"></i>
                         <div class="notification-content">
-                            <div class="notification-title">Bienvenue sur FLYHOST !</div>
+                            <div class="notification-title">Bienvenue sur KermHosting !</div>
                             <div class="notification-message">Créez votre premier serveur et obtenez 10 coins gratuits</div>
                             <div class="notification-time">À l'instant</div>
                         </div>
@@ -1355,17 +1143,9 @@
                     <div class="notification-item">
                         <i class="fas fa-rocket notification-icon"></i>
                         <div class="notification-content">
-                            <div class="notification-title">Nouveau : Plan Unlimited</div>
-                            <div class="notification-message">Ressources illimitées pour vos gros projets</div>
+                            <div class="notification-title">Nouveau : Plan 4GB</div>
+                            <div class="notification-message">Plus de puissance pour vos projets</div>
                             <div class="notification-time">Il y a 2 heures</div>
-                        </div>
-                    </div>
-                    <div class="notification-item">
-                        <i class="fas fa-shield-alt notification-icon"></i>
-                        <div class="notification-content">
-                            <div class="notification-title">Maintenance terminée</div>
-                            <div class="notification-message">Tous les systèmes sont opérationnels</div>
-                            <div class="notification-time">Hier</div>
                         </div>
                     </div>
                 </div>
@@ -1377,14 +1157,13 @@
                 <section class="hero-section">
                     <div class="hero-badge">
                         <span class="badge-pulse"></span>
-                        Nouvelle version 4.0
+                        Nouvelle version 1.0
                     </div>
                     <h1 class="hero-title">
                         Déployez vos <span class="gradient-text">serveurs Node.js</span> en 1 minute
                     </h1>
                     <p class="hero-subtitle">
                         Interface mobile intuitive, gestion complète, prix adaptés à tous les budgets.
-                        Rejoignez une communauté de développeurs passionnés.
                     </p>
                     <div class="hero-actions">
                         <button class="btn btn-primary" id="getStartedBtn">
@@ -1397,11 +1176,11 @@
                     </div>
                     <div class="hero-stats">
                         <div class="stat-item">
-                            <span class="stat-number">5K+</span>
+                            <span class="stat-number" id="totalUsers">0</span>
                             <span class="stat-text">Utilisateurs</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">2K+</span>
+                            <span class="stat-number" id="totalServers">0</span>
                             <span class="stat-text">Serveurs actifs</span>
                         </div>
                         <div class="stat-item">
@@ -1413,67 +1192,46 @@
 
                 <!-- Features Section -->
                 <section class="features-section">
-                    <h2 class="section-title">Pourquoi choisir <span class="gradient-text">FLYHOST</span> ?</h2>
-                    <p class="section-subtitle">Une expérience d'hébergement pensée pour les développeurs mobiles</p>
+                    <h2 class="section-title">Pourquoi choisir <span class="gradient-text">KermHosting</span> ?</h2>
                     
                     <div class="features-grid">
                         <div class="feature-card">
-                            <div class="feature-icon" style="background: linear-gradient(135deg, #7C3AED20, #C084FC20)">
-                                <i class="fas fa-bolt" style="color: #7C3AED"></i>
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
                             </div>
                             <h3 class="feature-title">Démarrage instantané</h3>
                             <p class="feature-description">
-                                Créez votre serveur en moins d'une minute. Pas de configuration complexe, tout est automatisé.
+                                Créez votre serveur en moins d'une minute. Tout est automatisé.
                             </p>
                         </div>
                         
                         <div class="feature-card">
-                            <div class="feature-icon" style="background: linear-gradient(135deg, #3B82F620, #60A5FA20)">
-                                <i class="fas fa-mobile-alt" style="color: #3B82F6"></i>
+                            <div class="feature-icon">
+                                <i class="fas fa-mobile-alt"></i>
                             </div>
                             <h3 class="feature-title">Mobile first</h3>
                             <p class="feature-description">
-                                Interface optimisée pour smartphone. Gérez vos serveurs où que vous soyez.
+                                Interface optimisée pour smartphone. Gérez vos serveurs partout.
                             </p>
                         </div>
                         
                         <div class="feature-card">
-                            <div class="feature-icon" style="background: linear-gradient(135deg, #10B98120, #34D39920)">
-                                <i class="fas fa-shield-alt" style="color: #10B981"></i>
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
                             </div>
                             <h3 class="feature-title">Sécurité renforcée</h3>
                             <p class="feature-description">
-                                Isolation complète des serveurs, sauvegardes automatiques et protection DDoS incluse.
+                                Isolation complète des serveurs et protection DDoS incluse.
                             </p>
                         </div>
                         
                         <div class="feature-card">
-                            <div class="feature-icon" style="background: linear-gradient(135deg, #F59E0B20, #FBBF2420)">
-                                <i class="fas fa-coins" style="color: #F59E0B"></i>
+                            <div class="feature-icon">
+                                <i class="fas fa-coins"></i>
                             </div>
                             <h3 class="feature-title">Système de coins</h3>
                             <p class="feature-description">
-                                Gagnez des coins chaque jour et parrainez vos amis pour payer vos serveurs.
-                            </p>
-                        </div>
-                        
-                        <div class="feature-card">
-                            <div class="feature-icon" style="background: linear-gradient(135deg, #EC489920, #F472B620)">
-                                <i class="fas fa-code" style="color: #EC4899"></i>
-                            </div>
-                            <h3 class="feature-title">Gestion de fichiers</h3>
-                            <p class="feature-description">
-                                Éditeur de code intégré, upload de fichiers, gestion des variables d'environnement.
-                            </p>
-                        </div>
-                        
-                        <div class="feature-card">
-                            <div class="feature-icon" style="background: linear-gradient(135deg, #8B5CF620, #A78BFA20)">
-                                <i class="fas fa-headset" style="color: #8B5CF6"></i>
-                            </div>
-                            <h3 class="feature-title">Support réactif</h3>
-                            <p class="feature-description">
-                                Support Discord et email. Une équipe à l'écoute de vos besoins.
+                                Gagnez des coins chaque jour pour payer vos serveurs.
                             </p>
                         </div>
                     </div>
@@ -1481,8 +1239,7 @@
 
                 <!-- Pricing Preview -->
                 <section class="pricing-preview">
-                    <h2 class="section-title">Des plans pour <span class="gradient-text">tous les projets</span></h2>
-                    <p class="section-subtitle">Du simple bot Discord à l'application d'entreprise</p>
+                    <h2 class="section-title">Des plans pour <span class="gradient-text">tous</span></h2>
                     
                     <div class="pricing-cards">
                         <div class="pricing-card">
@@ -1497,7 +1254,6 @@
                                 <li><i class="fas fa-check"></i> 5 GB Stockage</li>
                                 <li><i class="fas fa-check"></i> 50% CPU</li>
                                 <li><i class="fas fa-check"></i> 24h d'essai</li>
-                                <li class="disabled"><i class="fas fa-times"></i> Support prioritaire</li>
                             </ul>
                             <button class="btn btn-outline pricing-btn">Essayer</button>
                         </div>
@@ -1514,7 +1270,6 @@
                                 <li><i class="fas fa-check"></i> 10 GB Stockage</li>
                                 <li><i class="fas fa-check"></i> 100% CPU</li>
                                 <li><i class="fas fa-check"></i> 14 jours</li>
-                                <li><i class="fas fa-check"></i> Support standard</li>
                             </ul>
                             <button class="btn btn-primary pricing-btn">Choisir</button>
                         </div>
@@ -1531,7 +1286,6 @@
                                 <li><i class="fas fa-check"></i> 40 GB Stockage</li>
                                 <li><i class="fas fa-check"></i> 400% CPU</li>
                                 <li><i class="fas fa-check"></i> 14 jours</li>
-                                <li><i class="fas fa-check"></i> Support prioritaire</li>
                             </ul>
                             <button class="btn btn-outline pricing-btn">Choisir</button>
                         </div>
@@ -1539,7 +1293,7 @@
                     
                     <div class="pricing-note">
                         <i class="fas fa-info-circle"></i>
-                        <span>Gagnez des coins chaque jour et via parrainage pour payer vos serveurs !</span>
+                        <span>Gagnez des coins chaque jour pour payer vos serveurs !</span>
                     </div>
                     
                     <div class="pricing-cta">
@@ -1556,7 +1310,7 @@
                             <div class="step-number">1</div>
                             <div class="step-content">
                                 <h3>Créez votre compte</h3>
-                                <p>Inscription gratuite en 30 secondes. Vérification email requise pour activer votre compte.</p>
+                                <p>Inscription gratuite en 30 secondes. Vérification email requise.</p>
                             </div>
                         </div>
                         
@@ -1564,7 +1318,7 @@
                             <div class="step-number">2</div>
                             <div class="step-content">
                                 <h3>Gagnez des coins</h3>
-                                <p>Connectez-vous chaque jour, parrainez des amis et participez aux événements.</p>
+                                <p>Connectez-vous chaque jour, parrainez des amis.</p>
                             </div>
                         </div>
                         
@@ -1572,15 +1326,7 @@
                             <div class="step-number">3</div>
                             <div class="step-content">
                                 <h3>Créez votre serveur</h3>
-                                <p>Choisissez un plan, nommez votre serveur et lancez-le instantanément.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="step">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <h3>Déployez votre code</h3>
-                                <p>Upload, éditez, gérez vos variables d'env et lancez votre application.</p>
+                                <p>Choisissez un plan et lancez votre serveur instantanément.</p>
                             </div>
                         </div>
                     </div>
@@ -1600,7 +1346,7 @@
                                 <i class="fas fa-star"></i>
                             </div>
                             <p class="testimonial-text">
-                                "Interface super intuitive sur mobile. Je gère mes bots Discord depuis mon téléphone sans aucun problème !"
+                                "Interface super intuitive sur mobile. Je gère mes bots Discord depuis mon téléphone !"
                             </p>
                             <div class="testimonial-author">
                                 <img src="https://ui-avatars.com/api/?name=Thomas+M&background=7C3AED&color=fff&size=40" alt="Author">
@@ -1620,33 +1366,13 @@
                                 <i class="fas fa-star"></i>
                             </div>
                             <p class="testimonial-text">
-                                "Le système de coins est génial ! Je n'ai pas dépensé un centime depuis 3 mois grâce aux récompenses quotidiennes."
+                                "Le système de coins est génial ! Je n'ai pas dépensé un centime depuis 3 mois."
                             </p>
                             <div class="testimonial-author">
                                 <img src="https://ui-avatars.com/api/?name=Sarah+K&background=10B981&color=fff&size=40" alt="Author">
                                 <div>
                                     <strong>Sarah K.</strong>
                                     <span>Startupeuse</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="testimonial-card">
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="testimonial-text">
-                                "Support super réactif sur Discord. J'ai eu un problème à 2h du matin, réglé en 10 minutes !"
-                            </p>
-                            <div class="testimonial-author">
-                                <img src="https://ui-avatars.com/api/?name=Alex+R&background=F59E0B&color=fff&size=40" alt="Author">
-                                <div>
-                                    <strong>Alex R.</strong>
-                                    <span>Hébergeur</span>
                                 </div>
                             </div>
                         </div>
@@ -1664,17 +1390,7 @@
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                             <div class="faq-answer">
-                                Les coins sont notre monnaie virtuelle. Vous en gagnez chaque jour en vous connectant, en parrainant des amis, et lors d'événements spéciaux. Ils servent à payer vos serveurs.
-                            </div>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                <span>Puis-je utiliser mon propre nom de domaine ?</span>
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div class="faq-answer">
-                                Oui ! Vous pouvez configurer vos propres noms de domaine pour vos serveurs. Nous fournissons également des sous-domaines gratuits.
+                                Les coins sont notre monnaie virtuelle. Vous en gagnez chaque jour en vous connectant.
                             </div>
                         </div>
                         
@@ -1684,31 +1400,17 @@
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                             <div class="faq-answer">
-                                Vous recevez un email 24h avant l'expiration. Si vous ne renouvelez pas, le serveur est automatiquement supprimé. Vous pouvez toujours en créer un nouveau.
+                                Vous recevez un email 24h avant. Si vous ne renouvelez pas, le serveur est supprimé.
                             </div>
                         </div>
-                        
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                <span>Puis-je transférer mon serveur à quelqu'un ?</span>
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div class="faq-answer">
-                                Oui, vous pouvez transférer vos serveurs à d'autres utilisateurs. Le destinataire doit avoir suffisamment de coins pour couvrir la durée restante.
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-cta">
-                        <a href="#" class="btn btn-link">Voir toutes les FAQs <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </section>
 
                 <!-- CTA Section -->
                 <section class="cta-section">
                     <div class="cta-content">
-                        <h2>Prêt à déployer <span class="gradient-text">votre projet</span> ?</h2>
-                        <p>Rejoignez des milliers de développeurs qui nous font confiance</p>
+                        <h2>Prêt à <span class="gradient-text">démarrer</span> ?</h2>
+                        <p>Rejoignez des développeurs qui nous font confiance</p>
                         <div class="cta-actions">
                             <button class="btn btn-primary btn-large" id="finalCtaBtn">
                                 Créer mon compte gratuit
@@ -1725,7 +1427,7 @@
                     <div class="footer-section">
                         <div class="footer-logo">
                             <i class="fas fa-cloud-upload-alt"></i>
-                            <span>FLYHOST</span>
+                            <span>KermHosting</span>
                         </div>
                         <p>Hébergement Node.js nouvelle génération, optimisé pour mobile.</p>
                     </div>
@@ -1736,8 +1438,6 @@
                             <ul>
                                 <li><a href="/pricing">Tarifs</a></li>
                                 <li><a href="#">Fonctionnalités</a></li>
-                                <li><a href="#">API</a></li>
-                                <li><a href="#">Statut</a></li>
                             </ul>
                         </div>
                         
@@ -1745,8 +1445,6 @@
                             <h4>Ressources</h4>
                             <ul>
                                 <li><a href="#">Documentation</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Communauté</a></li>
                                 <li><a href="#">Support</a></li>
                             </ul>
                         </div>
@@ -1756,19 +1454,17 @@
                             <ul>
                                 <li><a href="#">CGU</a></li>
                                 <li><a href="#">Confidentialité</a></li>
-                                <li><a href="#">Mentions</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 
                 <div class="footer-bottom">
-                    <p>&copy; 2025 FLYHOST. Tous droits réservés.</p>
+                    <p>&copy; 2024 KermHosting. Tous droits réservés.</p>
                     <div class="footer-social">
                         <a href="#"><i class="fab fa-discord"></i></a>
                         <a href="#"><i class="fab fa-github"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </footer>
@@ -1776,29 +1472,29 @@
     </div>
 
     <script>
-        // ===== SIDEBAR TOGGLE =====
+        // Sidebar
         const sidebar = document.getElementById('sidebar');
-        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        const overlay = document.getElementById('sidebarOverlay');
         const menuToggle = document.getElementById('menuToggle');
         const closeSidebar = document.getElementById('closeSidebar');
 
         function openSidebar() {
             sidebar.classList.add('active');
-            sidebarOverlay.classList.add('active');
+            overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
 
         function closeSidebarFunc() {
             sidebar.classList.remove('active');
-            sidebarOverlay.classList.remove('active');
+            overlay.classList.remove('active');
             document.body.style.overflow = '';
         }
 
         menuToggle.addEventListener('click', openSidebar);
         closeSidebar.addEventListener('click', closeSidebarFunc);
-        sidebarOverlay.addEventListener('click', closeSidebarFunc);
+        overlay.addEventListener('click', closeSidebarFunc);
 
-        // ===== NOTIFICATIONS TOGGLE =====
+        // Notifications
         const notificationBtn = document.getElementById('notificationBtn');
         const notificationsPanel = document.getElementById('notificationsPanel');
         const closeNotifications = document.getElementById('closeNotifications');
@@ -1811,46 +1507,60 @@
             notificationsPanel.classList.remove('active');
         });
 
-        // ===== FAQ TOGGLE =====
+        document.addEventListener('click', (e) => {
+            if (!notificationsPanel.contains(e.target) && !notificationBtn.contains(e.target)) {
+                notificationsPanel.classList.remove('active');
+            }
+        });
+
+        // FAQ
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
-                const faqItem = button.closest('.faq-item');
-                faqItem.classList.toggle('active');
+                button.closest('.faq-item').classList.toggle('active');
             });
         });
 
-        // ===== SIMULATED STATS =====
-        function updateStats() {
-            document.getElementById('statUsers').textContent = '5.2K';
-            document.getElementById('statServers').textContent = '2.1K';
-        }
-        updateStats();
-
-        // ===== CHECK AUTH STATUS =====
-        function checkAuth() {
+        // Auth Check
+        async function checkAuth() {
             const token = localStorage.getItem('token');
             if (token) {
-                document.getElementById('sidebarUserName').textContent = 'Utilisateur';
-                document.getElementById('sidebarUserEmail').textContent = 'user@example.com';
-                document.getElementById('sidebarUserBadge').textContent = 'Membre';
-                document.getElementById('userAvatarSmall').src = 'https://ui-avatars.com/api/?name=User&background=7C3AED&color=fff&size=32';
-                
-                document.getElementById('navLogin').style.display = 'none';
-                document.getElementById('navRegister').style.display = 'none';
-                document.getElementById('logoutDivider').style.display = 'block';
-                document.getElementById('navLogout').style.display = 'block';
+                try {
+                    const res = await fetch('/api/user/me', {
+                        headers: { 'Authorization': `Bearer ${token}` }
+                    });
+                    const data = await res.json();
+                    if (data.success) {
+                        document.getElementById('sidebarUserName').textContent = data.user.username;
+                        document.getElementById('sidebarUserEmail').textContent = data.user.email;
+                        document.getElementById('sidebarUserBadge').textContent = data.user.role;
+                        document.getElementById('userAvatarSmall').src = `https://ui-avatars.com/api/?name=${data.user.username}&background=7C3AED&color=fff&size=32`;
+                        
+                        document.getElementById('navLogin').style.display = 'none';
+                        document.getElementById('navRegister').style.display = 'none';
+                        document.getElementById('logoutDivider').style.display = 'block';
+                        document.getElementById('navLogout').style.display = 'block';
+                        
+                        document.getElementById('totalUsers').textContent = '100+';
+                        document.getElementById('totalServers').textContent = '50+';
+                    }
+                } catch (error) {
+                    console.error('Erreur auth:', error);
+                }
+            } else {
+                document.getElementById('totalUsers').textContent = '100+';
+                document.getElementById('totalServers').textContent = '50+';
             }
         }
         checkAuth();
 
-        // ===== LOGOUT =====
+        // Logout
         document.getElementById('navLogout')?.addEventListener('click', (e) => {
             e.preventDefault();
             localStorage.removeItem('token');
             window.location.reload();
         });
 
-        // ===== NAVIGATION =====
+        // Navigation
         document.getElementById('navLogin').addEventListener('click', (e) => {
             e.preventDefault();
             window.location.href = '/login';
@@ -1873,14 +1583,7 @@
             window.location.href = '/pricing';
         });
 
-        // ===== CLOSE NOTIFICATIONS WHEN CLICKING OUTSIDE =====
-        document.addEventListener('click', (e) => {
-            if (!notificationsPanel.contains(e.target) && !notificationBtn.contains(e.target)) {
-                notificationsPanel.classList.remove('active');
-            }
-        });
-
-        // ===== PREVENT SCROLLING WHEN SIDEBAR OPEN ON MOBILE =====
+        // Responsive
         window.addEventListener('resize', () => {
             if (window.innerWidth > 1024) {
                 closeSidebarFunc();
